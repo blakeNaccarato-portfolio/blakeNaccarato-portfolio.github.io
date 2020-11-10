@@ -2,7 +2,7 @@ publishDir = "docs"
 baseurl = "/"
 
 title = "Blake Naccarato"
-copyright = "© {year}, Blake Naccarato"
+copyright = "© {year} Blake Naccarato"
 
 enableGitInfo = true
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
