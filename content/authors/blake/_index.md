@@ -24,3 +24,5 @@ social:
   icon_pack: fab
   link: https://github.com/blakeNaccarato
 ---
+
+Research assistant studying boiling and condensation phenomena in the Active Materials and Smart Living laboratory at the University of Nevada, Las Vegas.
