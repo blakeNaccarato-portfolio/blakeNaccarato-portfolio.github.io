@@ -8452,18 +8452,11 @@ ul.share li:hover i {
 /*************************************************
  *  Page Builder: sections and widgets
  **************************************************/
-@keyframes intro {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .home-section {
-  position: relative;
   background-color: white;
+  position: relative;
   padding: 110px 0 110px 0;
-  animation: intro 0.3s both;
-  animation-delay: 0.15s; }
+  z-index: 0; }
 
 .home-section.fullscreen {
   min-height: calc(100vh - 70px); }
@@ -8512,10 +8505,9 @@ ul.share li:hover i {
   position: absolute;
   top: 0;
   left: 0;
-  height: fill-available;
-  height: -webkit-fill-available;
-  width: fill-available;
-  width: -webkit-fill-available; }
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
 
 /* Default background image properties for home sections. */
 .home-section-bg .bg-image {
@@ -8573,14 +8565,7 @@ ul.share li:hover i {
  *  Hero Widget
  **************************************************/
 .wg-hero {
-  padding: 3em 0;
-  clear: both;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: intro 0.3s both;
-  animation-delay: 0s;
-  animation-delay: 0.25s; }
+  padding: 3em 0; }
 
 .hero-title {
   font-size: 2.7rem;
@@ -8643,14 +8628,14 @@ a.hero-cta-alt:hover {
 /*************************************************
  *  Slider Widget
  **************************************************/
-/* Clear `.home-section` as padding and animation interferes with Slider's layout and animations. */
+/* Clear `.home-section` as any padding or animation interferes with Slider's layout and animations. */
 .home-section.wg-slider {
   padding: 0;
   animation: none;
   animation-delay: unset; }
 
 /* The Slider widget reuses the Hero widget's `.wg-hero` class.
- * We must remove the `animation` and `clear` in this instance or
+ * We must remove any `animation` and `clear` (although Hero no longer sets `clear: both`) in this instance or
  * multiple slides can be `.active` at once. */
 .carousel-inner .wg-hero {
   animation: none;
