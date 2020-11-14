@@ -4,4 +4,5 @@ active: true
 headless: true
 author: blake
 title: About
+weight: 1
 ---
