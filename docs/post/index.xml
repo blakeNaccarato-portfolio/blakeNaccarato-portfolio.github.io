@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blake Naccarato</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blake Naccarato</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><copyright>© 2020 Blake Naccarato</copyright><lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/logo_hu8ff86e3b8b84308796e92a291f4f43f0_19519_300x300_fit_box_2.png</url>
+      <title>Blake Naccarato</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>Web Lesson 1: Build a web portfolio with Hugo</title>
+      <link>/post/build-a-web-portfolio-with-hugo/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/post/build-a-web-portfolio-with-hugo/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;This is a Gist, hosted on &lt;a href=&#34;https://gist.github.com&#34;&gt;https://gist.github.com&lt;/a&gt;. This guide is written in Markdown, a simple language that facilitates formatting with paragraphs, headers, bulleted lists, tables, equations, links, and images without needing to type raw HTML. This file is automatically rendered in the GitHub Flavored Markdown (GFM) specification, which makes it look pretty. If you click the &amp;ldquo;Raw&amp;rdquo; button at the top-right, you will see how this file was originally typed.&lt;/p&gt;
+&lt;p&gt;Why is this important? Well, we want to be able to build a simple website without having to learn HTML, CSS, and JavaScript. A simple site, like a portfolio or blog, is considered &amp;ldquo;static&amp;rdquo;. This is contrasted with &amp;ldquo;dynamic&amp;rdquo; sites like storefronts, social media, and web apps. We will use Hugo, a &amp;ldquo;static site builder&amp;rdquo;, to build our website. Hugo takes a series of folders and Markdown files and renders it into a website according to a theme that you select.&lt;/p&gt;
+&lt;p&gt;This guide will walk you through the various bits of software you need to accomplish this task on your own computer. Some of the specifics of this guide are Windows-oriented, but each step can be performed on Mac or Linux as well with minor modification. We will go through setup first, then we will clone this very Gist and open it in VSCode, and finally we will make a local build of an example site with Hugo.&lt;/p&gt;
+&lt;h2 id=&#34;2-setup&#34;&gt;2. Setup&lt;/h2&gt;
+&lt;h3 id=&#34;21-install-powershell-7&#34;&gt;2.1. Install PowerShell 7&lt;/h3&gt;
+&lt;p&gt;Navigate to the &lt;a href=&#34;https://github.com/PowerShell/PowerShell/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell releases&lt;/a&gt; page and click to download the latest version for your system. At the time of writing, &lt;code&gt;PowerShell-7.1.0-win-x64.msi&lt;/code&gt; was the latest for 64-bit Windows. Run the installer to install. I don&amp;rsquo;t recall all of the installation options, but in general enable any &amp;ldquo;context menu&amp;rdquo; options, and don&amp;rsquo;t worry about the &amp;ldquo;remoting&amp;rdquo; option.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;22-set-up-vscode&#34;&gt;2.2. Set up VSCode&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download and install VSCode&lt;/a&gt;. During the installation, enabling the &amp;ldquo;context menu&amp;rdquo; option will let you right-click on folders to open them in VSCode.&lt;/p&gt;
+&lt;p&gt;Once VSCode is installed, open it. Press &lt;strong&gt;Ctrl+,&lt;/strong&gt; (that&amp;rsquo;s a comma) to open Settings, then click &lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/settings.png&#34; alt=&#34;settings&#34;&gt; on the right side of the tab bar to &lt;strong&gt;Open Settings (JSON)&lt;/strong&gt;. Paste the contents of &lt;a href=&#34;https://gist.github.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94#file-settings-json&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;settings.json&lt;/a&gt; &lt;em&gt;from this Gist&lt;/em&gt; (between the &lt;code&gt;SNIPs&lt;/code&gt;) to &lt;em&gt;your&lt;/em&gt; &lt;code&gt;settings.json&lt;/code&gt; and press &lt;strong&gt;Ctrl+S&lt;/strong&gt; to save the file. Then you can close it if you wish. The settings will use PowerShell 7 as your default terminal and soft-wrap &lt;code&gt;*.md&lt;/code&gt; (Markdown) files for when we start looking at Markdown files a bit later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ctrl+,&lt;/strong&gt; is one of the first keyboard shortcuts you should know in VSCode. And you should also become comfortable with editing your &lt;code&gt;settings.json&lt;/code&gt; directly. You can also edit settings in the helpful GUI, but it just puts keys in your JSON file in the order that you modified them, making a mess. You really want to organize your &lt;code&gt;settings.json&lt;/code&gt; with comments (the lines with &lt;code&gt;\\&lt;/code&gt;) so that you remember why you made certain changes.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;23-install-git&#34;&gt;2.3. Install Git&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download and install git&lt;/a&gt;. Choose the following configuration options when installing on Windows. You may deviate from these options if you know what you&amp;rsquo;re doing, this is just how I have configured my Git installation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select components
+&lt;ul&gt;
+&lt;li&gt;Windows Explorer integration
+&lt;ul&gt;
+&lt;li&gt;Git Bash Here&lt;/li&gt;
+&lt;li&gt;Git GUI Here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Git LFS&lt;/li&gt;
+&lt;li&gt;Associate .git* configuration files with the default text editor&lt;/li&gt;
+&lt;li&gt;Associate .sh files to be run with bash&lt;/li&gt;
+&lt;li&gt;Check daily for Git for Windows updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choosing the default editor used by Git
+&lt;ul&gt;
+&lt;li&gt;Use Visual Studio Code as Git&amp;rsquo;s default editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Adjusting the name of the initial branch in new repositories
+&lt;ul&gt;
+&lt;li&gt;Override the default branch name for new repositories
+&lt;ul&gt;
+&lt;li&gt;main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Adjusting your PATH environment
+&lt;ul&gt;
+&lt;li&gt;Git from the command line and also from 3rd-party software&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choosing HTTPS transport backend
+&lt;ul&gt;
+&lt;li&gt;Use the OpenSSL library&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuring the line ending conversions
+&lt;ul&gt;
+&lt;li&gt;Checkout Windows-style, commit Unix-style line endings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuring the terminal emulator to use with Git Bash
+&lt;ul&gt;
+&lt;li&gt;Use Windows&#39; default console window&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose the default behavior of &lt;code&gt;git pull&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Default (fast-forward or merge)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose a credential helper
+&lt;ul&gt;
+&lt;li&gt;Git Credential Manager Core&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuring extra options
+&lt;ul&gt;
+&lt;li&gt;Enable file system caching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuring experimental options
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Don&amp;rsquo;t select anything here.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;3-preview-markdown-in-vscode&#34;&gt;3. Preview Markdown in VSCode&lt;/h2&gt;
+&lt;h3 id=&#34;31-clone-this-gist&#34;&gt;3.1. Clone this Gist&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s practice using git and VSCode together to preview Markdown content. Copy the link in the box when &lt;strong&gt;Clone via HTTPS&lt;/strong&gt; is selected.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/clone.png&#34; alt=&#34;clone&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now, open VSCode and bring up the Command Palette with &lt;strong&gt;Ctrl+Shift+P&lt;/strong&gt;. This is another keyboard shortcut you should learn, since almost &lt;em&gt;anything&lt;/em&gt; that you can do in VSCode can be done from this dialog. In this case, we&amp;rsquo;re looking for the &lt;strong&gt;Git: Clone&lt;/strong&gt; command. You can just start typing &lt;strong&gt;clone&lt;/strong&gt; and the command should be the first one you see. Press &lt;strong&gt;Enter&lt;/strong&gt; to select the  command, then &lt;strong&gt;Ctrl+V&lt;/strong&gt; to paste in the link you just copied and press &lt;strong&gt;Enter&lt;/strong&gt; again.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Select &lt;code&gt;Desktop&lt;/code&gt; in the next dialog. A folder named &lt;code&gt;064a7e2891e7f9398e6db28fa872ee94&lt;/code&gt;, containing a clone of this Gist, will appear on your &lt;code&gt;Desktop&lt;/code&gt;. When prompted whether you would like to open the repository, click &lt;strong&gt;Open&lt;/strong&gt;. If you miss your chance to click this notification, you can just &lt;strong&gt;right-click&lt;/strong&gt; on the folder and select &lt;strong&gt;Open with Code&lt;/strong&gt;. If you don&amp;rsquo;t have the context menu entry to &lt;strong&gt;Open with Code&lt;/strong&gt;, you can also use &lt;strong&gt;File &amp;gt; Open Folder&lt;/strong&gt; in any VSCode window.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/open.png&#34; alt=&#34;open&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;32-preview-markdown&#34;&gt;3.2. Preview Markdown&lt;/h3&gt;
+&lt;p&gt;You should now see the source for the very guide you are reading in the VSCode &lt;strong&gt;Explorer&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+E&lt;/strong&gt; or click on the two-pages icon in the sidebar). The file is titled &lt;code&gt;$ Build a web portfolio with Hugo.md&lt;/code&gt; (the &lt;code&gt;$&lt;/code&gt; is a trick to get this file to appear at the top of the Gist). Click on &lt;code&gt;$ Build a web portfolio with Hugo.md&lt;/code&gt; to open it. Then, click &lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/preview.png&#34; alt=&#34;preview&#34;&gt; in the right side of the tab bar to preview it.&lt;/p&gt;
+&lt;p&gt;Try typing somewhere in the file, and see how the preview changes simultaneously. This is essentially how you will generate content for your website. The raw file is just plain text, but certain symbols have special meaning. You can review the &lt;a href=&#34;https://www.markdownguide.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Guide&lt;/a&gt; (the &lt;a href=&#34;https://www.markdownguide.org/cheat-sheet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cheat Sheet&lt;/a&gt; is especially handy) to learn Markdown syntax.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;33-install-extensions&#34;&gt;3.3. Install Extensions&lt;/h3&gt;
+&lt;p&gt;Keep the Markdown preview visible. Now, install the following extensions by clicking on the links &lt;em&gt;from within the VSCode Markdown preview&lt;/em&gt;. That&amp;rsquo;s because they don&amp;rsquo;t link properly in &lt;a href=&#34;https://gist.github.com&#34;&gt;https://gist.github.com&lt;/a&gt;, due to variation in Markdown flavors mentioned earlier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;vscode:extension/yzhang.markdown-all-in-one&#34;&gt;Markdown All in One&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;vscode:extension/DavidAnson.vscode-markdownlint&#34;&gt;markdownlint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;vscode:extension/goessner.mdmath&#34;&gt;Markdown+Math&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;vscode:extension/bierner.markdown-preview-github-styles&#34;&gt;Markdown Preview Github Styling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notice how the Markdown preview changed to more accurately reflect how it looks on GitHub? This was from the last extension we installed. You can always disable that extension (from the Extensions sidebar tab) if you want to get back the default preview. If any of the extensions has a &amp;ldquo;Reload&amp;rdquo; prompt after installing, you may click it to reload the instance of VSCode.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;4-build-a-website-with-hugo&#34;&gt;4. Build a website with Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;41-set-up-hugo-extended&#34;&gt;4.1. Set up Hugo Extended&lt;/h3&gt;
+&lt;p&gt;Download the latest release of &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Extended&lt;/a&gt; for your system. We want the &lt;em&gt;Extended&lt;/em&gt; version so that we can use more advanced templates like Hugo Academic. At the time of writing, the latest release was &lt;code&gt;hugo_extended_0.78.2_Windows-64bit.zip&lt;/code&gt;. If you get a warning that this file is not commonly downloaded, bypass it by opting to &lt;strong&gt;Keep&lt;/strong&gt; the file.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Extract the contents to &lt;code&gt;%USERPROFILE%\Hugo\bin&lt;/code&gt; (creating intermediate folders if necessary) and add it to the user&amp;rsquo;s &lt;code&gt;Path&lt;/code&gt; environment variable. You can do this by pressing &lt;strong&gt;Start/Windows&lt;/strong&gt; and starting to type &amp;ldquo;environment&amp;rdquo;, click on &amp;ldquo;Edit the system environment variables&amp;rdquo;, click &amp;ldquo;Environment Variables&amp;rdquo;, then select &amp;ldquo;Path&amp;rdquo; in the top half of the dialog and click &amp;ldquo;Edit&amp;rdquo;, then click &amp;ldquo;New&amp;rdquo; and enter &lt;code&gt;%USERPROFILE%\Hugo\bin&lt;/code&gt;. The following image illustrates this process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/environment.png&#34; alt=&#34;environment&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can update Hugo by periodically downloading the latest &lt;em&gt;Extended&lt;/em&gt; release and replacing the contents of your &lt;code&gt;%USERPROFILE%\Hugo\bin&lt;/code&gt; folder with the new release.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;42-set-up-go&#34;&gt;4.2. Set up Go&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://golang.org/doc/install&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download and install Go&lt;/a&gt;. You can accept the default options during installation. The installer should automatically add the appropriate entry to the &lt;code&gt;Path&lt;/code&gt; environment variable. By the way, you will often see &lt;strong&gt;Go&lt;/strong&gt; referred to as &lt;strong&gt;Golang&lt;/strong&gt;, as in &amp;ldquo;The &lt;em&gt;Go&lt;/em&gt; programming &lt;em&gt;language&lt;/em&gt;&amp;rdquo;, which is a slightly more search-engine friendly term. You can update Go by periodically downloading the latest version and running the installer.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;43-build-a-local-preview-with-hugo&#34;&gt;4.3. Build a local preview with Hugo&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;re going to be using the &lt;a href=&#34;https://github.com/wowchemy/starter-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic theme&lt;/a&gt;. We can &lt;em&gt;clone&lt;/em&gt; this repo to our &lt;code&gt;Desktop&lt;/code&gt;, much like we previously did with the Gist. Copy the link when &lt;strong&gt;HTTPS&lt;/strong&gt; is selected in the &lt;strong&gt;Clone&lt;/strong&gt; dialog.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gist.githubusercontent.com/blakeNaccarato/064a7e2891e7f9398e6db28fa872ee94/raw/44ccf6defd76a4b1641cb90e5cc464ad0b181cd1/clone2.png&#34; alt=&#34;clone2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now, open VSCode and find &lt;strong&gt;Git: Clone&lt;/strong&gt; in the Command Palette (remember the keyboard shortcut?). Paste the link into the dialog and press &lt;strong&gt;Enter&lt;/strong&gt;. We &lt;em&gt;don&amp;rsquo;t&lt;/em&gt; have to open it in VSCode this time. Instead, let&amp;rsquo;s open the folder in Windows Explorer. Select the &lt;code&gt;exampleSite&lt;/code&gt; subfolder and &lt;strong&gt;Ctrl+C&lt;/strong&gt; to copy it. Then &lt;strong&gt;Ctrl+V&lt;/strong&gt; to paste it in &lt;code&gt;%USERPROFILE%\Hugo\sites&lt;/code&gt;, creating the &lt;code&gt;sites&lt;/code&gt; folder if necessary.&lt;/p&gt;
+&lt;p&gt;Now we can &lt;strong&gt;right-click&lt;/strong&gt; on the &lt;code&gt;exampleSite&lt;/code&gt; folder we just pasted and click &lt;strong&gt;Open with Code&lt;/strong&gt;. VSCode shows us the folder structure of our example website. The VSCode terminal appears on the bottom half of the screen. If the terminal isn&amp;rsquo;t already open, let&amp;rsquo;s toggle it by pressing &lt;strong&gt;Ctrl+`&lt;/strong&gt; (that&amp;rsquo;s a &amp;ldquo;backtick&amp;rdquo;, on the same key as the &amp;ldquo;tilde&amp;rdquo; or ~). The terminal allows us to command the computer to do things with the utilities we have installed. Let&amp;rsquo;s type the following and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-PowerShell&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will install the required Go modules and build your website locally. You can preview your website by navigating to &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt; in your web browser. If this step fails, try running &lt;code&gt;hugo mod clean&lt;/code&gt; before &lt;code&gt;hugo server&lt;/code&gt;. This is a locally-hosted preview of your website.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;44-modify-the-example-website&#34;&gt;4.4. Modify the example website&lt;/h3&gt;
+&lt;p&gt;You can actively modify files in VSCode, and the website should automatically refresh to reflect your changes. For example, try searching for content you see on the website in the VSCode folder structure. Scroll to the Biography section in your browser. Press &lt;strong&gt;Ctrl+Shift+F&lt;/strong&gt; or click the magnifying glass in the sidebar, then search for &amp;ldquo;Nelson Bighetti is a professor of artificial intelligence&amp;rdquo;. Click on the search result. You should arrive at &lt;code&gt;content\authors\admin\_index.md&lt;/code&gt;, a Markdown file that informs this portion of the website. Modify the paragraph, then check the &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt; tab in your browser. The browser preview will automatically update after you press &lt;strong&gt;Ctrl+S&lt;/strong&gt; to save the file.&lt;/p&gt;
+&lt;p&gt;Also in this folder is settings like &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;interests&lt;/code&gt;, and &lt;code&gt;education&lt;/code&gt;. Changing any of these will change the respective section on the website. This is Hugo&amp;rsquo;s way of representing &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Front Matter&lt;/a&gt;, in this case in YAML format. It allows you to enter information that will be specially handled by whatever template you&amp;rsquo;re using.&lt;/p&gt;
+&lt;p&gt;Now, press &lt;strong&gt;Ctrl+Shift+E&lt;/strong&gt; to navigate to VSCode &lt;strong&gt;Explorer&lt;/strong&gt; and look at the folder structure. Here is the result of running &lt;code&gt;tree content&lt;/code&gt; in the terminal (annotated).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-PowerShell&#34;&gt;exampleSite\content
+├───authors       # the authors of this website
+├───courses       # populates &amp;quot;Courses&amp;quot;
+├───home          # populates the front page with widgets sorted by the &amp;quot;weight&amp;quot; setting
+├───post          # populates &amp;quot;Posts&amp;quot;
+├───project       # populates &amp;quot;Projects&amp;quot;
+├───publication   # populates &amp;quot;Publications&amp;quot;
+├───slides        # Markdown-based slideshows, linked to posts/projects
+└───talk          # populates &amp;quot;Recent &amp;amp; Upcoming Talks&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can navigate the site while walking through folders and files in VSCode to familiarize yourself with the layout. This example can be particularly overwhelming, since it includes a little bit of &lt;em&gt;everything&lt;/em&gt;. Play around with the content, using &lt;strong&gt;Ctrl+Shift+F&lt;/strong&gt; to find strings of text from the website and see where they are in the folder structure. Modify things in the template and see how the website changes. Also, you can use the &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy Academic theme documentation&lt;/a&gt; to learn about all the features of the template.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;5-conclusion&#34;&gt;5. Conclusion&lt;/h2&gt;
+&lt;p&gt;~working~&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

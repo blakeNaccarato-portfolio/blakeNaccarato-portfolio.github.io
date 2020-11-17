@@ -7147,14 +7147,14 @@ a.text-dark:hover, a.text-dark:focus {
  *  Wowchemy's Core Style
  **************************************************/
 html {
-  font-family: "Roboto", sans-serif;
-  font-size: 13.86px;
+  font-family: "", sans-serif;
+  font-size: 16.17px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.65; }
 
 @media screen and (min-width: 58em) {
   html {
-    font-size: 18px; } }
+    font-size: 21px; } }
 
 body {
   font-family: inherit;
@@ -7227,14 +7227,14 @@ ul.task-list li input[type="checkbox"] {
 
 /* Navigation bar text */
 .navbar-light {
-  font-family: "Roboto", sans-serif;
+  font-family: "", sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "", sans-serif;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: .5rem;
@@ -7334,7 +7334,7 @@ figcaption.numbered {
 
 pre,
 code {
-  font-family: "Roboto Mono", monospace;
+  font-family: "", monospace;
   color: #c7254e;
   /* Match bg of default highlight theme. */
   background-color: #f8f8f8; }
@@ -7671,6 +7671,25 @@ div.alert a {
   background-color: #fff5f7;
   border-color: #ff3860; }
 
+.cta-group {
+  --button-group-margin: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: left;
+  margin-left: calc(-1 * var(--button-group-margin));
+  margin-right: calc(-1 * var(--button-group-margin));
+  padding: 0; }
+
+.cta-group-center {
+  justify-content: center; }
+
+.cta-group li {
+  margin-bottom: 1em;
+  margin-left: var(--button-group-margin);
+  margin-right: var(--button-group-margin); }
+
 .svg-icon {
   display: inline-flex;
   align-self: center; }
@@ -7725,7 +7744,7 @@ footer .powered-by {
   height: 70px;
   background: #fff;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.11);
-  font-size: 13.86px;
+  font-size: 16.17px;
   position: fixed;
   top: 0;
   right: 0;
@@ -7754,7 +7773,7 @@ footer .powered-by {
         font-weight: bold !important;
         color: #2962ff !important; }
   .navbar .dropdown-menu {
-    font-size: 13.86px; }
+    font-size: 16.17px; }
   .navbar .dropdown-item.active,
   .navbar .dropdown-item-active {
     font-weight: bold;

@@ -1,7 +1,6 @@
 theme = "minimal"
 day_night = true
-font = ""
-font_size = "M"
 date_format = "Jan 2, 2006"
 time_format = "3:04 PM"
-main_menu = {enable = false}
+main_menu = {enable = true, show_day_night = false}
+reading_time = false

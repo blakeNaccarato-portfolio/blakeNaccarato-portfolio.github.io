@@ -1,0 +1,9 @@
+[[main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 1
+
+[[main]]
+  name = "Courses"
+  url = "courses/"
+  weight = 2
