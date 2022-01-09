@@ -1,4 +1,0 @@
----
-title: Courses
-layout: docs
----

@@ -1,0 +1,15 @@
+publishDir: "docs"
+baseurl: "/"
+
+title: "Blake Naccarato"
+copyright: "© {year} Blake Naccarato"
+
+module:
+  imports:
+    - path: "github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5"
+
+markup:
+  _merge: deep
+
+security:
+  _merge: deep
