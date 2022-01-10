@@ -23,6 +23,9 @@ social:
 - icon: "github"
   icon_pack: "fab"
   link: "https://github.com/blakeNaccarato"
+- icon: "google-scholar"
+  icon_pack: "ai"
+  link: "https://scholar.google.com/citations?user=Blrd1xwAAAAJ"
 
 interests:
 - "Heat Transfer"
