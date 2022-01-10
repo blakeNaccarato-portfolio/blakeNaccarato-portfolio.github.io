@@ -1,4 +1,6 @@
 ---
+draft: true
+
 title: "Web Lesson 1: Build a web portfolio with Hugo"
 subtitle: &subtitle "Build a web portfolio based on the Hugo Academic theme."
 summary: *subtitle

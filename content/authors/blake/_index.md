@@ -11,7 +11,7 @@ education:
   courses:
   - course: "PhD in Mechanical Engineering"
     institution: "University of Nevada, Las Vegas"
-    year: "Spring 2022"
+    year: "Exp. May 2022"
   - course: "MS in Mechanical Engineering"
     institution: "University of Nevada, Las Vegas"
     year: 2017
