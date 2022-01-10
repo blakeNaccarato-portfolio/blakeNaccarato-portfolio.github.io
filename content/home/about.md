@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: About
-widget: about
-author: blake
+title: "About"
+widget: "about"
+author: "blake"
 ---

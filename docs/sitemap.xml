@@ -4,14 +4,20 @@
   
   
   <url>
+    <loc>/post/</loc><lastmod>2020-11-16T00:00:00+00:00</lastmod><priority>0</priority></url>
+  <url>
+    <loc>/</loc><lastmod>2020-11-16T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/categories/</loc><lastmod>2020-11-16T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/post/build-a-web-portfolio-with-hugo/</loc><lastmod>2020-11-16T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/categories/web-lessons/</loc><lastmod>2020-11-16T00:00:00+00:00</lastmod></url>
+  <url>
     <loc>/home/</loc><priority>0</priority></url>
   <url>
     <loc>/authors/</loc></url>
   <url>
-    <loc>/</loc></url>
-  <url>
     <loc>/authors/blake/</loc></url>
-  <url>
-    <loc>/categories/</loc></url>
   <url>
     <loc>/tags/</loc></url></urlset>

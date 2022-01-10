@@ -9,7 +9,7 @@ module:
     - path: "github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5"
 
 markup:
-  _merge: deep
+  _merge: "deep"
 
 security:
-  _merge: deep
+  _merge: "deep"

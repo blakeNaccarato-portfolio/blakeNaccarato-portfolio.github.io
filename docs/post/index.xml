@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blake Naccarato</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blake Naccarato</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><copyright>© 2022 Blake Naccarato</copyright><lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/media/logo_hu8ff86e3b8b84308796e92a291f4f43f0_19519_300x300_fit_box_3.png</url>
       <title>Blake Naccarato</title>
-      <link>/</link>
+      <link>/post/</link>
     </image>
     
     <item>
@@ -292,14 +292,6 @@
 &lt;h2 id=&#34;5-conclusion&#34;&gt;5. Conclusion&lt;/h2&gt;
 &lt;p&gt;~working~&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/home/</guid>
-      <description></description>
     </item>
     
   </channel>
