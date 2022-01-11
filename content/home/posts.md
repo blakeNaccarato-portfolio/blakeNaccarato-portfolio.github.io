@@ -2,6 +2,6 @@
 active: false
 
 weight: 3
-title: "Posts"
+title: "Projects"
 widget: "pages"
 ---
