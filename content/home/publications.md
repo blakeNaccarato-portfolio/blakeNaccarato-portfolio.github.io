@@ -1,13 +1,11 @@
 ---
-active: false
-
-weight: 4
-title: "Posts"
 widget: "pages"
+weight: 2
+title: "Publications"
 content:
   filters:
     folders:
-      - "post"
+      - "publication"
 design:
   view: "masonry"
 ---
