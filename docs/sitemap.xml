@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  
+  <url>
+    <loc>/project/example/section2/</loc></url>
+  <url>
+    <loc>/project/example/section3/</loc></url>
+  <url>
+    <loc>/project/example/section4/</loc></url>
+  <url>
+    <loc>/</loc><lastmod>2022-01-01T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/project/</loc><lastmod>2022-01-01T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/project/example/</loc><lastmod>2022-01-01T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/publication/17-visualization-of-dropwise-condensation-on-vertical-plate-and-horizontal-tube-geometry/</loc><lastmod>2017-08-01T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/publication/</loc><lastmod>2017-08-01T00:00:00+00:00</lastmod></url>
+  <url>
+    <loc>/home/</loc><priority>0</priority></url>
+  <url>
+    <loc>/post/</loc><priority>0</priority></url>
+  <url>
+    <loc>/authors/</loc></url>
+  <url>
+    <loc>/authors/blake/</loc></url>
+  <url>
+    <loc>/categories/</loc></url>
+  <url>
+    <loc>/tags/</loc></url></urlset>
